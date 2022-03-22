@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Position</title>
+  </head>
+  <style>
+    .parent {
+      background: aquamarine;
+      padding: 10px;
+      /* position: relative; */
+      height: 200vh;
+    }
+
+    .child {
+      height: 50px;
+    }
+
+    .one {
+      background: antiquewhite;
+      position: sticky;
+      top: 2px;
+    }
+
+    .two {
+      background: aqua;
+      /* position: absolute; */
+      /* top: 0px; */
+      /* left: 0px; */
+    }
+
+    .three {
+      background: blueviolet;
+    }
+  </style>
+  <body>
+    <!-- position:relative => 1. It means the element is out of the document flow 
+                              2. Properites like top , left , bottom , and right can be set 
+                              3. It is relative to its own original position 
+                              4. The original space occupied by this element will not be occupied by other elements automatically -->
+
+    <!-- position:absolute => 1. It is out of the document flow
+                              2. The original space occupied by this element will be occupied by other elements 
+                              3. top left bottom right are set on the basis of first non static position ancestor and if not found ancestory it will set acc. to body [#1]
+                              4. We can't set its width. width will be acc. to content length -->
+    
+    <!-- position:fixed =>    1. It behaves something like absolute(point 1 & 2).
+                              2. It always set acc to page\body.
+                              3. Ye bas fix ho jata hai aur kabhi move nhi karta.(means ki body se jitni top,left,bottom,right set honge utne hi rhenge) -->
+
+    <!-- position:sticky =>   1. It behaves something like relative(point 1 & 4).
+                              2. It always set acc to page.
+                              3. Ye fix nhi hota bas stick ho jaata hai matlab thodi der tak move krega jab tak iski given property nhi aa jaati. 
+                                 maanlo humne top se de diya 2px ab agr humne page ko move kiya to ye element top se 2px ki distance bnaye rkhega
+                                -->
+                        
+    <div class="parent">
+      <div class="child one">Child 1</div>
+      <div class="child two">Child 2</div>
+      <div class="child three">Child 3</div>
+    </div>
+  </body>
+</html>
+
+<!-- 
+By default sb elements pe position static hoti hai
+
+  #1.
+  jis element(x) ko position absolute di hai wo dom tree me apne aise ancestor element(y) ko dundta hai jispe static ke alwa koi or position lgi ho 
+  agr usko aisa koi ancestor element(y) mil jaata hai jiski position static nhi hai to fir ye wala element(x) us ancestor element(y) ke hisab se set hota hai
+  agr usko kahi bhi aisa ancestor element nhi milta jispe static ke alwa koi or position lgi ho to fir ye element(x) body ke hisab se set hota hai 
+ -->

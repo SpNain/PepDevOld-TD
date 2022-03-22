@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    .flexbox{
+        background-color: cyan;
+        justify-content:center;  /* main axis ke along changes show hote hai*/
+        align-items: center;     /*cross axis ke along changes show hote hai. Ye height aur min height ko ek jaise consider karta hai*/
+        display: flex;
+        /* flex-wrap: wrap; */ /* jab browser chota bda ho tab bhi items aligned rhe*/
+        height: 600px;
+        /* flex-direction: column; */ /*change main into corss and cross into main axis.*/
+    }
+    .flexbox-item{
+        border: 1px solid;
+        width: 300px;
+        background-color: cornflowerblue;
+    }
+    .fbi1{
+        height: 100px;
+        /*min-height: 200px;*/
+        /* align-self:cen */ /*f property jab ek element pe lgani ho tb use kr skte hai */
+    }
+    .fbi2{
+        height: 200px;
+        /* align-self: flex-start; */
+    }
+    .fbi3{
+        height: 150px;
+        /* align-self: flex-end; */ 
+    }
+</style>
+
+<body>
+    <div class="flexbox">
+        <div class="flexbox-item fbi1">Flexbox item 1</div>
+        <div class="flexbox-item fbi2">Flexbox item 2</div>
+        <div class="flexbox-item fbi3">Flexbox item 3</div>
+    </div>
+</body>
+</html>
+
+
+<!-- 
+In CSS : 
+agr kisi element pe 2 properties lgi hui aur jo ek dusre se related ho to 
+last me likhi hui property usse uper likhi hui property ko overwrite kr deti hai
+
+-->

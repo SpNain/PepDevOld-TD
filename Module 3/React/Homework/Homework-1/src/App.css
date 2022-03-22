@@ -1,0 +1,24 @@
+.container{
+    
+    
+    
+    
+    justify-content:center;  /* main axis ke along changes show hote hai*/
+    align-items: center;     /*cross axis ke along changes show hote hai. Ye height aur min height ko ek jaise consider karta hai*/
+    display: flex;
+    flex-direction: column;
+}
+
+.big-container{
+    background-color: cyan;
+    justify-content:center;  /* main axis ke along changes show hote hai*/
+    align-items: center;     /*cross axis ke along changes show hote hai. Ye height aur min height ko ek jaise consider karta hai*/
+    display: flex;
+    flex-wrap: wrap; /* jab browser chota bda ho tab bhi items aligned rhe*/
+    height: 100vh;
+    /* flex-direction: column; */ /*change main into corss and cross into main axis.*/
+}
+button{
+    margin: 80px;
+    background: lightgoldenrodyellow;
+}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>DBName <input id="dbname" type="text" /></div>
+    <div>DBVersion <input id="dbversion" type="text" /></div>
+    <button id="opendb">Open Database</button>
+
+    <div>MediaId <input id="mid" type="text" /></div>
+    <div>MediaType <input id="mediatype" type="text" /></div>
+    <button id="addmedia">Add Media</button>
+
+    <div>
+        <button id="showmedia">Show Media</button>
+    </div>
+
+    <script>
+      let dbName = document.getElementById("dbname");
+      let dbVersion = document.getElementById("dbversion");
+      let openDbButton = document.getElementById("opendb");
+      let db;
+
+      let mid = document.getElementById("mid");
+      let mediaType = document.getElementById("mediatype");
+      let addMediaButton = document.getElementById("addmedia");
+      let showMediaButton = document.getElementById("showmedia");
+
+
+      openDbButton.addEventListener("click", openDB);
+      addMediaButton.addEventListener("click", addMedia);
+      showMediaButton.addEventListener("click" , showMedia);
+      
+      function showMedia(){
+          let txnObject = db.transaction("Media" , "readonly"); // db ke media naam ke object Store pe kaam krna hai readonly ka 
+          let mediaTable = txnObject.objectStore("Media"); 
+          
+          let cursorObject = mediaTable.openCursor(); // to iterate on all the rows / tuples
+          cursorObject.onsuccess = function(e){  // success pe ye function execute hoga
+              let cursor = cursorObject.result;  // isse hume ke ek row milegi
+              if(cursor){
+                  console.log(cursor.value);  // ek row ki value print kardi
+                  cursor.continue();  // isse cursor aage matlab next row pe move ho jaayega 
+              }                       // is trh ek ek karke cursor aage bdta rhega aur ye fxn repeat hota rhega
+
+          }
+
+      }
+
+      function addMedia() {
+        //   db me media add hojaega
+        let txnObject = db.transaction("Media", "readwrite"); // start transaction on Media named Object Store
+        let mediaTable = txnObject.objectStore("Media"); // this will get access to object Store jiska naam Media h 
+
+        mediaTable.add({ mid : mid.value, type: mediaType.value }); // it will add this object in mediaTable or mediaStore
+
+        txnObject.onerror = function(e){ // agr same key dobara bhejoge to error aayega
+            console.log("txn failed");
+            console.log(e);
+        }
+      }
+
+      function openDB() {
+        let dbOpenRequest = indexedDB.open(dbName.value, dbVersion.value); // agr pahle se database exist karta hoga to wahi database ka version update kar dega. Agr current version previous version se smaller hai to error show hoga 
+        console.log(dbOpenRequest);                                        // agr exist nhi karta hoga to nya database banyega jo naam aur version pass kiya hoga usi naam aur version ka 
+                                                                           // by default version ki value 1 hoti hai
+        dbOpenRequest.onupgradeneeded = function (e) {
+          alert("Inside on upgrade needed !!");
+          db = e.target.result;
+          db.createObjectStore("Media", { keyPath: "mid" });  // jo database humne open kiya hai usme ye ek table create kar dega jo naam humne isme pass kiya hoga
+        };
+
+        dbOpenRequest.onsuccess = function (e) {  // agr first time db creat kiya hai || existed db ko update(update means changing the version not adding on data) kiya hai --> to ye aur uper wala dono fxn chalte hai 
+          alert("Inside on success !!");          // lekin agr humne existing db me sirf data add on ya remove kiya hai to sirf ye wala fxn chlega
+          db = e.target.result;
+        };
+
+        dbOpenRequest.onerror = function (e) {
+          alert("Inside on error !!");
+        };
+      }
+    
+    </script>
+  </body>
+</html>
+
+
+<!-- 
+
+  For explaination check videos.
+ -->

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        //var wala to jaisa nodejs aur in browser chlna chahiye usi way me chlta hai 
+        // lekin let wala nodejs meto line no. 43 ki wjah se can't accees before initialization de deta hai (for reason check scope.js)
+        // lekin in browser nhi deta iska clear reason abhi pta nhi hai (maybe because ek "a" naam ka variable globally defined hai)
+        // console.log(a);
+
+        // if (true) {
+        //     var a = 50;
+        //     console.log(a);
+        // }
+
+        // function callMe() {
+        //     console.log(a);
+        //     var a = 100;
+        //     console.log("Inside call me");
+        //     console.log(a);
+        // }
+
+        // callMe();
+
+        // console.log(a);
+
+        let a = 20;
+        console.log(a);
+
+        if (true) {
+            let a = 50;
+            console.log(a);
+        }
+
+        function callMe() {
+            console.log(a);// uper iss line ki baat ho rhi hai 
+            let a = 100;
+            console.log("Inside call me");
+            console.log(a);
+        }
+
+        callMe();
+
+        console.log(a);
+
+
+    </script>
+</body>
+
+</html>
