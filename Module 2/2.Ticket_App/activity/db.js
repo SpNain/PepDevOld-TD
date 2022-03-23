@@ -1,4 +1,4 @@
-let myDB = window.localStorage;  // ye hume local host ka local storage laakar deta hai #1
+let myDB = window.localStorage;  // ye hume local host laakar deta hai *1
 let ticketsContainer = document.querySelector(".tickets-container");
 let allFilterClasses = ["red" , "blue" , "green" , "yellow" , "black"];
 
@@ -32,21 +32,21 @@ function loadSelectedTickets(filter){
 }
 
 
-function saveTicketToDB(ticketInfoObject) {   //[#1]
-  let allTickets = myDB.getItem("allTickets");   // get item hume hamre storage me padi wo key laake deta hai jo key value(allTickets) humnepass ki ho
+function saveTicketToDB(ticketInfoObject) {  //[#1] 
+  let allTickets = myDB.getItem("allTickets");   // get item hume hamre storage me padi key laake deta hai jo hume key value(allTickets) pass ki ho
   if (allTickets) {
     // already all tickets are present
-    allTickets = JSON.parse(allTickets); 
+    allTickets = JSON.parse(allTickets);  
     allTickets.push(ticketInfoObject);
     myDB.setItem("allTickets", JSON.stringify(allTickets)); // setItem hmari key me value set karta hai isme hum do chije pass karte hai pehla argument key name(allTicket) aur dusra argument value(allTickets which contains tickets ka info object)
-  } else {                                                  // set item strings me value accept karta hai 
-    // no allTicket key found 
+  } else {                                                  // set item strings me value accept karta hai  
+    // no all Ticket key found
     let allTickets = [ticketInfoObject];  
     myDB.setItem("allTickets", JSON.stringify(allTickets)); // local Storage me key string ki form me store hoti hai thats why we stringify the obj.
   }
 }
 
-function appendTicket(ticketInfoObject) {   // [#5]
+function appendTicket(ticketInfoObject) {   // [#5] 
   let { ticketFilter, ticketValue , ticketId } = ticketInfoObject;  // alag alag nikalne ki bjaye ek saath teeno object nikal diye
   let ticketDiv = document.createElement("div");
   ticketDiv.classList.add("ticket");
@@ -60,7 +60,7 @@ function appendTicket(ticketInfoObject) {   // [#5]
     </div>`;
 
   // this is logic to switch ticket header color/filter on ui and db both
-    let ticketHeader = ticketDiv.querySelector(".ticket-header"); // ticketHeader pkd ke laaye
+  let ticketHeader = ticketDiv.querySelector(".ticket-header"); // ticketHeader pkd ke laaye
   ticketHeader.addEventListener("click", function (e) {  // uspe click event lgaya
       // logic to switch filter on ui
       let currentFilter = e.target.classList[1]; //konsa filter abhi hai wo nikala e.g.black
@@ -93,15 +93,15 @@ function appendTicket(ticketInfoObject) {   // [#5]
 
 
 function deleteTicketFromDb(ticketId){ // [#6]
-    let allTickets = JSON.parse(myDB.getItem("allTickets")); 
-    // [ {} , {} , {} , {} , {}  ]
-    let updatedTickets = allTickets.filter(  function(ticketObject){
-        if(ticketObject.ticketId == ticketId){    
-            return false;
-        }
-        return true;
-    });
-    myDB.setItem("allTickets" , JSON.stringify(updatedTickets));  // jab tickets filter ho jaayegi tab hum unko firse apne db me store kra dete hai
+  let allTickets = JSON.parse(myDB.getItem("allTickets")); 
+  // [ {} , {} , {} , {} , {}  ]
+  let updatedTickets = allTickets.filter(  function(ticketObject){
+      if(ticketObject.ticketId == ticketId){    
+          return false;
+      }
+      return true;
+  });
+  myDB.setItem("allTickets" , JSON.stringify(updatedTickets));  // jab tickets filter ho jaayegi tab hum unko firse apne db me store kra dete hai
 }
 
 
