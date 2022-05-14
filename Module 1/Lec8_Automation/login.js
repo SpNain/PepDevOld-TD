@@ -137,7 +137,7 @@ browserOpenPromise
         return tab.waitForTimeout(2000); // isse wait hota hai jitna no. pass kiya h utna milli second ke liye
       })
       .then(function(){
-        return tab.type('.custominput' , gCode); // why we type in custom input rather than typing in direct editor[#3]
+        return tab.type('.custominput' , gCode); // [#3] why we type in custom input rather than typing in direct editor
       })
       .then(function(){
         return tab.keyboard.down("Control");
