@@ -74,7 +74,7 @@ DOM me har ek element ka ek obj hota hai jisme kuch keys pdi hoti hai
 element.key = ye element ke obj me jo key me value padi hogi laake de deta hai 
 e.g. Jo input box hota hai usme jo bhi hum type krte hai wo sb uske value naam ki key me jaata hai
      to agr hume use access krna hai to hum kuch aise likh skte hai
-     todoInput.value -> yha pe todoInput(input box) element ke value key me jo pda hoga wo aa jaayega
+    todoInput.value -> yha pe todoInput(input box) element ke value key me jo pda hoga wo aa jaayega
 
 #4.
 Jab bhi hum kisi bhi element pe koi event lgate hai to us element ke liye ek event obj bnta hai
