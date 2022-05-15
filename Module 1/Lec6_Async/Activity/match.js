@@ -57,7 +57,7 @@ function processData(html){
     // console.log("############################################");
 }
 function processLeaderBoard(teamName , batsmanName , runs , balls , fours , sixes ){
-    runs = Number(runs);// Number => ye string ki value ko numbers me convert kar deta hi
+    runs = Number(runs); // Number => ye string ki value ko numbers me convert kar deta hi
     balls = Number(balls);
     fours = Number(fours);
     sixes = Number(sixes);

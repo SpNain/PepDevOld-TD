@@ -31,7 +31,7 @@ async function login(){
 login();
 
 /*
-addModerators : iske pass browser aur tab aayenge 
+addModerators() : iske pass browser aur tab aayenge 
                 us tab pe present saare questions ke links nikal dega
                 aur ek ek krke saare questions pe moderators add kr dega
                 aur agr agge koi page hai to uspe jaake moderator ko call lg jaati hai 

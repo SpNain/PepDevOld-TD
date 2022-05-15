@@ -28,20 +28,20 @@ callMe();
 
 console.log("end");
 
+/*
+Async fxn ke andar jab tak koi async kaam nhi hota tab tak wo sync ke jaise hi chalte hai
 
-//Async fxn ke andar jab tak koi async kaam nhi hota tab tak wo sync ke jaise hi chalte hai
-
-// Dekho promises me kya hota tha
-// 1.hum ek promise bnate the 
-// 2.aur next wale ko uspe dependent bnane ke liye return lagate the 
-// 3.fir wo data next ke then ke scb me jata tha 
-// 4.aur scb execute hota tha
-// to await ne in sab steps ko summarize kar diya 
-// ye kya karta hai ki internally promise pe then lga deta hai 
-// matlab ki agr humne kisi promise ke aage await lga diya to jaise hi us promise ki state change hogi 
-// us data ko jis variable me assign karwana tha usme assign karwa dega 
-// aur next wali lines tab tak execute nhi hogi jab tak ye wali line chal nhi jaati jisse ek dependency create ho gyi
-
+Dekho promises me kya hota tha
+1.hum ek promise bnate the 
+2.aur next wale ko uspe dependent bnane ke liye return lagate the 
+3.fir wo data next ke then ke scb me jata tha 
+4.aur scb execute hota tha
+to await ne in sab steps ko summarize kar diya 
+ye kya karta hai ki internally promise pe then lga deta hai 
+matlab ki agr humne kisi promise ke aage await lga diya to jaise hi us promise ki state change hogi 
+us data ko jis variable me assign karwana tha usme assign karwa dega 
+aur next wali lines tab tak execute nhi hogi jab tak ye wali line chal nhi jaati jisse ek dependency create ho gyi
+*/
 /*
 Notes : 1. await hmesha pending promises pe hi lgta hai
         2. await sirf then ki call lgata hai isiliye await wale codes ko try catch me likha jaata hai 
