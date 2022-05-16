@@ -35,7 +35,7 @@ function fetchMedia() {
 
 function appendPhoto(mediaObj) {
   
-  // sbse pahle aate hi ui create hoga particular phot ke liye
+  // sbse pahle aate hi ui create hoga particular photo ke liye
   // aur kyunki src me media.url daala hai isiliye img me hume clicked photo dhikegi
   let mediaDiv = document.createElement("div");
   mediaDiv.classList.add("media-div");
@@ -99,7 +99,7 @@ function deleteMedia(mediaObject, mediaDiv) { // sath me mediaDiv bhi pass kiya 
 
 /*
 #1. 
-kyunki humne script.js me media ko add krne walr fxn addMedia() me url key me mediaURL daal rkha hai
+kyunki humne script.js me media ko add krne wale fxn addMedia() me url key me mediaURL daal rkha hai
 aur jab addMedia() fxn ko video ke case me call lgti hai tb humne videoObject pass kiya hai naki koi url
 so cursor.value gives us mediaObj => { mid: Date.now(), type: mediaType, url: mediaURL } (something like this)
 mediaObj.url gives us mediaURL => which is a videoObject 
