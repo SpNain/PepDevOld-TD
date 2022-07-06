@@ -1,0 +1,31 @@
+# .gitignore, package-lock.json, package.json & README.md ye files apne app bnti h 
+# jb hum "npx create-react-app `folder-name`"  krte h tb aur apne app folder-name(demo in this case) me git init bhi ho jaata h 
+# mai in 4 files ka short explaination yhi likh rha hu
+# package.json me apna dependencies hoti h jinpe apna project depend kr rha h
+# aur package-lock.json me jo package.json me dependencies h jinpe wo depend krti h unki info h
+# .gitignore me wo files hoti h jinhe ignore krna h
+# readme.md file me instruction wgerha hoti h ki kaise chlana h, test krna h etc.
+
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# production
+/build
+
+# misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

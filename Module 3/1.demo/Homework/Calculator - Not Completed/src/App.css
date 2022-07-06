@@ -1,0 +1,65 @@
+
+.Box{
+    justify-content:center;  /* main axis ke along changes show hote hai*/
+    align-items: center;     /*cross axis ke along changes show hote hai. Ye height aur min height ko ek jaise consider karta hai*/
+    display: flex;
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+}
+
+.body{
+    justify-content:center;  
+    align-items: center;     /*cross axis ke along changes show hote hai. Ye height aur min height ko ek jaise consider karta hai*/
+    display: flex;
+    flex-wrap: wrap; /* jab browser chota bda ho tab bhi items aligned rhe*/
+    height: 100vh;
+    width: 100%;
+    flex-direction: column;
+    border: 1px solid black;
+}
+
+.calculation{
+    height: 40px;
+    width: 20%;
+    border: 1px solid red;
+    margin: 5px;
+
+}
+.keypad{
+    width: 20%;
+    margin: 5px;
+}
+.operation{
+    height: 8%;
+    width:20%;
+    border: 1px solid green;
+    margin: 5px;
+}
+.number{
+	background: yellowgreen;
+	font-size:27px;
+	cursor: pointer;
+	width: 30%;
+	height: 46px;
+	border-radius: 5px;
+	box-shadow: 0px 4px rgba(0, 0, 0, 0.2);
+	margin: 0 7px 11px 0;
+	color: gray;
+	line-height: 46px;
+	text-align: center;
+	user-select: none;
+  /* outline: 0 solid; */
+	/* hover and active state transitions */
+	/* transition: all 0.2s ease; */
+
+}
+.equal,.C{
+    background:linear-gradient(45deg,green,yellow);
+    width:45%;
+}
+
+.number:hover {
+	/* background: green; */
+	color: white;
+    opacity: 0.7;
+}

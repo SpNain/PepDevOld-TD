@@ -1,0 +1,26 @@
+/* 
+Agr hume kisi specific component ke liye alag se css likhni h to 
+Component_name.css(not necessary you can name it anything.css) krke ek css stylesheet file bnakar usme likh skte h
+isme likhi css sirf usi component pe lgegi jis Component_name.js file me is import kr rkha hoga
+
+source me likhi css ko preference milti h public ki likhi css ke uper
+ye wali file inspect wale area me show nhi hoti
+*/
+
+input {
+  border: none;
+  color: white;
+  outline: none;
+}
+
+
+button{
+  height: 2rem;
+  width: 4rem;
+  font-size: 1.2rem;
+  text-align: center;
+  background-color: red;
+  color: white;
+  border: none;
+  outline: none;
+}
