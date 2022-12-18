@@ -113,12 +113,13 @@ b. Bracket operation.
 console.log(obj.movies[2].weaknes[0].substring(1,5))
 
 let key = "place";
-// console.log(obj.key); //=> it will check if there is a key named "key"
+// console.log(obj.key); //=> it will check if there is a key named `key`.
 
 // square brackets notation : useful when key is of two or more words.
-obj["place"];
+// console.log(obj["place"]); //=> it will check if there is a key which have value `place`.
 obj["Full Name"];
 
+// hum obj.key ka use krke `key` me value assing krwa skte h
 obj.skills = ["martial arts" , "taekwondo"];
 obj.place = "New york";
 // console.log(obj);

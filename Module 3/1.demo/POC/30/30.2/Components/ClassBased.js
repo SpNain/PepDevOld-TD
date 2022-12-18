@@ -24,6 +24,8 @@ export default ClassBased;
 jo components class ki madad se bne hote hai unhe class based components bolte hai 
 yaha pe ClassBased component ko ClassBased class ki madad se bnaya hai
 aur yaha pe JSX used hai kyunki humne js ke andar html likh rkhi hai
+Class based components me hum variable declare krne ke liye let use nhi krte
+Lekin agr variable render() ke andar h to fir hum let use krte h
 
 classBased class ko humne bnaya hai
 aur ye hmari bnayi hui class React ki component class ko inherit karti hai 

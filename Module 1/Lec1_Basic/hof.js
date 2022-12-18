@@ -26,7 +26,7 @@ fun("Iron Man", getLastName);
 // gFN , gLN => callback functions
 
 // STEVE STARK
-// STEVE MAN
+// STEVE MAN √
 // STEVE ROGERS
 // STEVE IRON
 // nothing

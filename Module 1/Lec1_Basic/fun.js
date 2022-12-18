@@ -20,7 +20,7 @@ function callback(){
     return 5;
 }
 
-// In js we can pass a function inside the parameters of another fuction because in js a function also can act like a variable.
+// In js we can pass a function inside the parameters of another function because in js a function also can act like a variable.
 function highOrderFunction( cb ){
     let value = cb(); // call cb
     console.log(value);

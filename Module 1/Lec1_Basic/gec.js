@@ -22,12 +22,14 @@ jab bhi javascript me koi code run hota hai to uske 2 phases hote hai :
 2. Code execution phase 
 
 sbse pahle sb varibles aur functions ko memory allocate hoti hai 
-jis variable me kuch assign nhi hai use undefined aur fuctions ko function ki body allocate ho jaati hai
+jis variable me kuch assign nhi hai use undefined aur functions ko function ki body allocate ho jaati hai
 
-to agr hum kisi fun ko as a varible declare krke fuction ki body se pahle call lga dete hai to usme error aayega kyunki allocation pahse me use as a variable treat kiya gya hai
-to hum uski body ki likhne ke baad hi use bta skte hai tu fuction hai
+to agr hum kisi fun ko as a varible declare krte h
+aur us function ki body likhne se pahle us function ko call lga dete hai to 
+usme error aayega kyunki allocation pahse me use as a variable treat kiya gya hai
+to hum uski body ko likhne ke baad hi use bta skte hai tu fuction hai
 
-right way -:
+right way -: calling function after writing fxn body
 
 let fun;
 
@@ -38,7 +40,7 @@ fun(){
 fun();
 
 
-wrong way -:
+wrong way -: calling function before writing fxn body
 
 let fun;
 
