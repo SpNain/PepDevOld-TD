@@ -17,7 +17,7 @@ function getFilesData(files) {   //files pass kri h jo wCat me bnayi h
   }
   return filesData;  // last me check chuk krke jod tod k de dega files ne
 }
-function applySFlag(data) {  // data bina updated filesData hai kyonki filesData ko update to yahimkarta hai
+function applySFlag(data) {  // data bina updated filesData hai kyonki filesData ko update to yahi karta hai
   // Hey I am F1
   // space
   // space
@@ -25,21 +25,21 @@ function applySFlag(data) {  // data bina updated filesData hai kyonki filesData
   // space
   // space
   // Bye I am F1
-  let emptyIncluded = false;  // taki txt wali line l baad sirf ek hi space lge
-  let removedSpaces = [];   //space remove karke string sotre karne k liye bnaya hai
+  let emptyIncluded = false;  // taki text wali line l baad sirf ek hi space lge
+  let removedSpaces = [];   //space remove karke string store karne k liye bnaya hai
   let splittedData = data.split("\r\n");
   //   [ 'Hey I am F1', '', '', '', '',  '','Bye I am F1', '' , "Hey m also f1"];  // data split hoke aisa bna gya
   //   splittedData.length = 9
-  // i=6;
+  //   i=6;
 
   for (let i = 0; i < splittedData.length; i++) {  // ek ek krke splitted data wala array k element check krenge
     if (splittedData[i] == "" && emptyIncluded == false) {  
       removedSpaces.push(splittedData[i]);
-      emptyIncluded = true;  // badal diya taki jab tak txt na aave yu true hi rhe or "if" me enter hi na hove
+      emptyIncluded = true;  // badal diya taki jab tak text na aave yu true hi rve or "if" me enter hi na hove
     } else if (splittedData[i] != "") {
       removedSpaces.push(splittedData[i]);
       emptyIncluded = false;
-      // if (i < splittedData.length -2) emptyIncluded = false;   //iss line ka khaas idea nhi h personally mue to galat lag rhi hai isiliye isko comment krke maine apna logic lgaya
+      // if (i < splittedData.length - 2) emptyIncluded = false;   //iss line ka khaas idea nhi h personally muje to galat lag rhi hai isiliye isko comment krke maine apna logic lgaya
     }
   }
   let removedSpacesString = removedSpaces.join("\r\n");  //string ko jod do
@@ -53,7 +53,7 @@ function applyBFlag(data) {  // ye jo data hai wo updated hoga ki nhi depend kar
   let splittedData = data.split("\r\n");
   for (let i = 0; i < splittedData.length; i++) {
     if (splittedData[i] != "") {
-      splittedData[i] = `${count}. ${splittedData[i]}`;
+      splittedData[i] = `${count}. ${splittedData[i]}`; //$(value) matlab jo value hogi wo aa jaayegi
       // splittedData[i] = count+". "+splittedData[i];
       count++;
     }
@@ -66,7 +66,7 @@ function applyNFlag(data) {  // same of b flag
   let count = 1;
   let splittedData = data.split("\r\n");
   for (let i = 0; i < splittedData.length; i++) {
-    splittedData[i] = `${count}. ${splittedData[i]}`;  //$(value) matlab jo value hogi wo aa jaayegi
+    splittedData[i] = `${count}. ${splittedData[i]}`;
     count++;
   }
   // console.log(splittedData);

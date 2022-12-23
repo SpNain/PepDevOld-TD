@@ -29,8 +29,8 @@ function getHighestWicketTaker(data){ // jo data cb me aaya hoga usko idhar pass
     let economyOfHighestWicketTaker;
     
     for(let i=0 ; i<bothBowlingTables.length ; i++){  // jo table aayi hai use ek ek karke fetch karenge 
-        let bowlingTable = myDocument(bothBowlingTables[i]);  // bothBowlingTable ko myDocument me pass kar diya taki cheerio k fxn use kar ske 
-        let allTableRows = bowlingTable.find("tbody tr");  // tbody k andar tr ka data leke aa jaayega => indirectly no. of rows milegi dono tabe ki combined
+        let bowlingTable = myDocument(bothBowlingTables[i]);  // bothBowlingTable ko myDocument me pass kar diya taki cheerio k fxn use kar ske // matlab bothBowlingTable ke andar jo 2 bowling talbes pdi h wo ek ek krke pass hogi myDocument me
+        let allTableRows = bowlingTable.find("tbody tr");  // tbody k andar tr ka data leke aa jaayega => indirectly no. of rows milegi, pahle 1st bowling talbe ki fir 2nd bowling table ki
         // {
         //     "0" : {tr},
         //     "1" : {tr},

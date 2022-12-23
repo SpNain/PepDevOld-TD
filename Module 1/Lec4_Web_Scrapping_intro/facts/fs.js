@@ -3,7 +3,7 @@
 // npm install cheerio
 
 const fs = require("fs");
-const cheerio = require("cheerio");  // basically html file ke data ko scrap krne k kaam aata ye
+const cheerio = require("cheerio");  // basically html file ke data ko scrap krne k kaam aata h ye
 
 
 let htmlKaData = fs.readFileSync("./index.html" , "utf8");
@@ -23,7 +23,7 @@ let myDocument = cheerio.load(htmlKaData);  // loaded data assigned in myDocumen
 // console.log(h1KaData);
 
 let PTag = myDocument("p");
-let secondPTag = myDocument("p")["1"];  //jab ek se jyada element present hoto hum obj me se index daalkar jo data chahiye hota hai use nikal lete hai 
+let secondPTag = myDocument("p")["1"];  //jab ek se jyada element present hoto hum obj me se jo data chahiye hota hai use index daalkar nikal lete hai 
 // console.log(secondPTag.text());// ye nhi chalega kyonki cheerio ke fxn sirf direct wale obj pe hi laagu hote hai
 
 // console.log(myDocument(secondPTag).text());// isiliye hum us small obj ko bde wale obj me pass kar dete hai jisse ki uspe bhi fxn laagu ho ske
@@ -40,14 +40,14 @@ let secondPTag = myDocument("p")["1"];  //jab ek se jyada element present hoto h
 // console.log(myDocument("ul>a").text());
 
 
-// classes and ids
+// classes =>
 // dot
 // console.log( myDocument(".inside").text() );
 // console.log( myDocument(".inside.main").text()  );
 
 
-// // ids =>
-// // #
+// ids =>
+// #
 // console.log( myDocument("#main-heading").text() );
 
 // console.log(PTag);

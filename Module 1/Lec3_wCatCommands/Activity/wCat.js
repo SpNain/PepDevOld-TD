@@ -56,5 +56,5 @@ console.log(filesData);
 
 process ek array hota hai jisme hum jo bhi terminal/CLI(command line interface) pe likhte hai unko store krta hai 
 node aur agr koi js file di hai to uski location store hogi 
-aur agr koi normal command hai like flag txt file to unke haam store honge.
+aur agr koi normal command hai like flag txt file to unke naam store honge.
 */
