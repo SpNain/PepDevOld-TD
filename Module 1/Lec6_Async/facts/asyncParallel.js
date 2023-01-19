@@ -5,7 +5,7 @@ const fs = require("fs");
 
 console.log("start");
 
-// ye jo teen files hai wo simultaneously read hogi to as a result kisi bhi file ka data kabhi bhi print ho skta hai koi strict order follow nhi hoga
+
 fs.readFile("./f1.txt" , function(err , data){
     console.log(data+"");
 })
