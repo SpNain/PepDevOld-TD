@@ -11,9 +11,6 @@
 <body>
 
     <script>
-        //var wala to jaisa nodejs aur in browser chlna chahiye usi way me chlta hai 
-        // lekin let wala nodejs meto line no. 43 ki wjah se can't accees before initialization de deta hai (for reason check scope.js)
-        // lekin in browser nhi deta iska clear reason abhi pta nhi hai (maybe because ek "a" naam ka variable globally defined hai)
         // console.log(a);
 
         // if (true) {
@@ -41,7 +38,7 @@
         }
 
         function callMe() {
-            console.log(a);// uper iss line ki baat ho rhi hai 
+            console.log(a);
             let a = 100;
             console.log("Inside call me");
             console.log(a);

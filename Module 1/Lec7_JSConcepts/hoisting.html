@@ -10,20 +10,17 @@
 
 <body>
     <script>
-        //  var me hoisting hoti hai
+        // var me hoisting hoti hai
         // console.log(a);
         // var a = "Steve";
         // console.log(a);
 
-        // Hoisting is possible in let and const but because let and const are stored in a object named script which is a temporal dead zone 
-        //And before initialization we cannot access variables in the temporal dead zone !!
-        //And code doesn't execute at all(Give error cannot access "a" before initialization).
-        // But in case of var there is no temporal dead zone although in var we also can't access "a" before initialization 
-        // But code execute 
+        // Hoisting is possible in let and const but because let and const are stored in temporal dead zone before initialization
+        // thats we cannot access variables in the temporal dead zone !!
         console.log(a);
         let a = "Steve";
         console.log(a); 
-        // nodejs doesn't show temporal deadzone in debugging process.
+
     </script>
 </body>
 
