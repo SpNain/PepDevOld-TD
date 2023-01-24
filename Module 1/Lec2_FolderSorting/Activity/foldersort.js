@@ -22,10 +22,10 @@ function getExtension(file){   // extensions laake dega
 function checkExtensionFolder(extension){   // overall agr folder nhi hoga to bna k dega
     // extension = "doc";
     let extensionFolderName = testFolderPath;  // ./Downloads
-    for(let key in extensionsMapping){           //extensionMapping object se ek ek karke key uthayenge jaise first me document
+    for(let key in extensionsMapping){           //extensionMapping object se ek ek karke key uthayenge jaise first me document fir Images and goes on.
         let extensions = extensionsMapping[key];   //isse hum document key ke elements ko extenions me store krwa reh h jaise doc pdf etc
         if(extensions.includes(extension)){       // check krega ki extensions me hmari extension(e.g.for doc - pdf,txt etc.) h ki nhi
-            extensionFolderName = extensionFolderName+"/"+key;    //agr hmari extension mil gyi to isme path daal denge .downloads/Documents
+            extensionFolderName = extensionFolderName+"/"+key;    //agr file ki extension extensions me exist krti hogi to hum extensionFolderName me path daal denge eg: ./downloads/Documents
             break;
         }
     }
