@@ -102,4 +102,3 @@ obj["Full Name"];
 obj.skills = ["martial arts" , "taekwondo"];
 obj.place = "New york";
 // console.log(obj);
-

@@ -36,16 +36,6 @@ f1KaPromise.then(function(f1KaData){
 
 
 
-
-
-
-
-
-
-
-
-
-
 // let thenKaPromise = f1KaPromise.then(function(data){
 //     console.log(data+"");
 //     console.log(f1KaPromise);
@@ -55,5 +45,3 @@ f1KaPromise.then(function(f1KaData){
 //     console.log(thenKaPromise);
 //     console.log("i ran after first scb !!");
 // })
-
-
