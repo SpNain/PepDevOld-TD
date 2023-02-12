@@ -1,14 +1,11 @@
-* {                                 /*this is a universal selector*/
+* {
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
 }
 
 body {
-    /* background-color:rgb(172, 178, 184); */
-    background-image: url('./todo-img.jpeg');
-    background-repeat: repeat-y;
-    background-size: cover; 
+    background-color: #9b59b6;
 }
 
 .todo-input-container {
@@ -18,11 +15,11 @@ body {
 }
 
 .todo-input {
-    height: 70%;        /*% to the parent element */
-    width: 65%;
+    height: 70%;
+    width: 80%;
     padding: 10px;
     outline: none;
-    border: 2px solid gold;
+    border: 0px;
     border-radius: 20px;
     font-size: 20px;
     display: block;
@@ -32,7 +29,7 @@ body {
 
 .add-todo {
     display: block;
-    margin: auto;    /*left right se equal distance le leta hai*/
+    margin: auto;
     height: 75%;
     width: 15%;
     font-weight: bold;
@@ -40,7 +37,7 @@ body {
     border: 5px solid white;
     color: white;
     font-size: 20px;
-    background-color: grey;
+    background-color: #8e44ad;
 }
 
 .todos-list-container {
@@ -48,28 +45,25 @@ body {
 }
 
 .todo-item {
-    width: 45%;
+    width: 60%;
     margin: auto;
     margin-top: 40px;
-    background-color: rgb(248, 248, 218);
+    background-color: #8e44ad;
     border-radius: 15px;
     padding: 10px;
-    display: flex;
     text-align: center;
-    flex-direction: column;
-    align-items: center;
 }
 
 .todo {
+    color: white;
     font-size: 20px;
-    margin-bottom: 10px;
+    margin: auto;
 }
 
 .delete-todo {
-    background-color: red;
+    background-color: #e74c3c;
     color: white;
     width: 70px;
     height: 25px;
     border: none;
-    border-radius: 5px;
 }

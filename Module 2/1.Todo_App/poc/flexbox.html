@@ -10,12 +10,12 @@
 <style>
     .flexbox{
         background-color: cyan;
-        justify-content: sp;  /* main axis ke along changes show hote hai*/
-        align-items: center;     /*cross axis ke along changes show hote hai. Ye height aur min height ko ek jaise consider karta hai*/
+        justify-content:center;
+        align-items: center;
         display: flex;
-        /* flex-wrap: wrap; */ /* jab browser chota bda ho tab bhi items aligned rhe*/
+        /* flex-wrap: wrap; */
         height: 600px;
-        /* flex-direction: column; */ /*change main into corss and cross into main axis.*/
+        /* flex-direction: column; */
     }
     .flexbox-item{
         border: 1px solid;
@@ -24,8 +24,7 @@
     }
     .fbi1{
         height: 100px;
-        /*min-height: 200px;*/
-        /* align-self:cen */ /*f property jab ek element pe lgani ho tb use kr skte hai */
+        /* align-self:center; */
     }
     .fbi2{
         height: 200px;
@@ -33,7 +32,7 @@
     }
     .fbi3{
         height: 150px;
-        /* align-self: flex-end; */ 
+        /* align-self: flex-end; */
     }
 </style>
 
@@ -45,11 +44,3 @@
     </div>
 </body>
 </html>
-
-
-<!-- 
-In CSS : 
-agr kisi element pe 2 properties lgi hui aur jo ek dusre se related ho to 
-last me likhi hui property usse uper likhi hui property ko overwrite kr deti hai
-
--->

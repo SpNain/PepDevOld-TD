@@ -35,11 +35,9 @@
     </div>
     <script src="https://cdn.jsdelivr.net/npm/short-unique-id@4.3.3/dist/short-unique-id.min.js"></script>
     <script>
-        let uuid = new ShortUniqueId(); // ShortUniqueId hume jo package use kiya hai usse milta hai aur hum uska ek obj bnake uuid me save kra lete hai aur ab jab bhi uuid ko call lgegi ek nyi unique id create karke dega
+        let uuid = new ShortUniqueId();
     </script>
-    <script src="./db.js"></script>     <!-- Compile hote time ye dono files ek file ke jaise behave krti hai  -->
-    <script src="./script.js"></script>  <!-- humne jo fxn 1st file me bnaye hai hum use iss file me use kar skte hai  -->
-</body>                                  <!-- lekin jo fxn ya variable humne 2nd file me bnaye hai hum use 1st file me tabhi use kar skte hai jab 2nd file me wo fxn ya variable execute/load ho chuka ho aur uske baad 1st file me use ho rha ho  -->
+    <script src="./db.js"></script>
+    <script src="./script.js"></script>
+</body>
 </html>
-
-<!--  -->
