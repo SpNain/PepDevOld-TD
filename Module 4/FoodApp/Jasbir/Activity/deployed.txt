@@ -1,4 +1,0 @@
-// ye wo wali repo h jo jasbir ne 66 lect me alag se bnayi thi 
-// jyada clarity ke liye poc/66 app1.js dekhlo
-
-https://github.com/Jasbir96/foodApp_backend

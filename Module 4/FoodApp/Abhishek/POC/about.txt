@@ -1,8 +1,0 @@
-poc me kya hai , poc kyu hai
-
-poc me lectwise kya kya kraya hai uska code alag alag hai 
-aur us din ke code ki puri explaination bhi hai 
-
-=> baad me mai iss file me se explaination utha ke main code yani activity me daalne wala tha 
-=> lekin bich me hi jasbir sir ne class lena start krdi 
-=> isiliye iske main code me bas maine references daale hai ki iss fxn ki explaination us poc folder me hai
